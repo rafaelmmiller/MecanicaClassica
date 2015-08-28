@@ -1,0 +1,77 @@
+set xlabel "q_2(t)"
+set ylabel "p_2(t)"
+set key below
+set terminal png size 1000,800
+
+set output "Figura13.png"
+
+plot "out/dadosMapaDePoincare0.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.40824', \
+     "out/dadosMapaDePoincare1.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.1', \
+     "out/dadosMapaDePoincare2.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.27515', \
+     "out/dadosMapaDePoincare3.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.22', \
+     "out/dadosMapaDePoincare4.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = -0.22', \
+     "out/dadosMapaDePoincare5.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.35, p_2(t = 0) = 0', \
+     "out/dadosMapaDePoincare6.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = -0.2, p_2(t = 0) = 0', \
+     "out/dadosMapaDePoincare7.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.3, p_2(t = 0) = 0', \
+     "out/dadosMapaDePoincare8.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = -0.29, p_2(t = 0) = 0'
+
+set output "Figura14.png"
+
+plot "out/dadosMapaDePoincare9.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.40824', \
+    "out/dadosMapaDePoincare10.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.1', \
+    "out/dadosMapaDePoincare11.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.22', \
+    "out/dadosMapaDePoincare12.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = -0.22', \
+    "out/dadosMapaDePoincare13.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.4, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare14.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = -0.2, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare15.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.3, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare16.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.5, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare17.dat"  using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.56, p_2(t = 0) = 0'
+
+set output "Figura15.png"
+set xlabel "t"
+set multiplot layout 2,2
+unset key
+
+  set ylabel "q_1(t)"
+  plot "out/q1PeriodicaE0125.dat"
+
+  set ylabel "p_1(t)"
+  plot "out/p1PeriodicaE0125.dat"
+
+  set ylabel "q_2(t)"
+  plot "out/q2PeriodicaE0125.dat"
+
+  set ylabel "p_2(t)"
+  plot "out/p2PeriodicaE0125.dat"
+
+unset multiplot
+
+set output "Figura16.png"
+set xlabel "t"
+set multiplot layout 2,2
+
+  set ylabel "q_1(t)"
+  plot "out/q1CaoticaE0125.dat"
+
+  set ylabel "p_1(t)"
+  plot "out/p1CaoticaE0125.dat"
+
+  set ylabel "q_2(t)"
+  plot "out/q2CaoticaE0125.dat"
+
+  set ylabel "p_2(t)"
+  plot "out/p2CaoticaE0125.dat"
+
+unset multiplot
+
+set key below
+set output "Figura17.png"
+set xlabel "q_2(t)"
+set ylabel "p_2(t)"
+
+plot "out/dadosMapaDePoincare18.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.1'  , \
+    "out/dadosMapaDePoincare19.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = 0.22', \
+    "out/dadosMapaDePoincare20.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0, p_2(t = 0) = -0.22', \
+    "out/dadosMapaDePoincare21.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = -0.2, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare22.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.3, p_2(t = 0) = 0', \
+    "out/dadosMapaDePoincare23.dat" using 1:2 pt 7 ps 1 title 'q_2(t = 0) = 0.5, p_2(t = 0) = 0'

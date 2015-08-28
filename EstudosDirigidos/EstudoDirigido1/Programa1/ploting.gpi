@@ -1,0 +1,60 @@
+set xlabel "t"
+set key below
+set term png
+
+set output "Figura1.png"
+
+set multiplot layout 2,1
+
+  set ylabel "q(t)"
+  plot "out/dadosLibracao_q_01.dat" with line title "Δt = 0.1", \
+       "out/dadosLibracao_q_001.dat" with line  title "Δt = 0.01", \
+       "out/dadosLibracao_q_0001.dat" with line  title "Δt = 0.001"
+
+  set ylabel "p(t)"
+  plot "out/dadosLibracao_p_01.dat" with line title "Δt = 0.1", \
+       "out/dadosLibracao_p_001.dat" with line  title "Δt = 0.01", \
+       "out/dadosLibracao_p_0001.dat" with line  title "Δt = 0.001"
+
+unset multiplot
+
+set output "Figura2.png"
+set multiplot layout 2,1
+
+  set ylabel "q(t)"
+  plot "out/dadosRotacao_q_01.dat" with line title "Δt = 0.1", \
+       "out/dadosRotacao_q_001.dat" with line  title "Δt = 0.01", \
+       "out/dadosRotacao_q_0001.dat" with line  title "Δt = 0.001"
+
+  set ylabel "p(t)"
+  plot "out/dadosRotacao_p_01.dat" with line title "Δt = 0.1", \
+       "out/dadosRotacao_p_001.dat" with line  title "Δt = 0.01", \
+       "out/dadosRotacao_p_0001.dat" with line  title "Δt = 0.001"
+
+unset multiplot
+
+set output "Figura3.png"
+set ylabel "E"
+plot "out/dadosLibracao_e_01.dat" with line title "Δt = 0.1", \
+     "out/dadosLibracao_e_001.dat" with line  title "Δt = 0.01", \
+     "out/dadosLibracao_e_0001.dat" with line  title "Δt = 0.001"
+
+set output "Figura4.png"
+set ylabel "E"
+plot "out/dadosRotacao_e_01.dat" with line title "Δt = 0.1", \
+     "out/dadosRotacao_e_001.dat" with line  title "Δt = 0.01", \
+     "out/dadosRotacao_e_0001.dat" with line  title "Δt = 0.001"
+
+set output "Figura5.png"
+set ylabel "p(t)"
+set xlabel "q(t)"
+plot "out/dadosLibracao_pvq_01.dat" with line title "Δt = 0.1", \
+     "out/dadosLibracao_pvq_001.dat" with line  title "Δt = 0.01", \
+     "out/dadosLibracao_pvq_0001.dat" with line  title "Δt = 0.001"
+
+set output "Figura6.png"
+set ylabel "p(t)"
+set xlabel "q(t)"
+plot "out/dadosRotacao_pvq_01.dat" with line title "Δt = 0.1", \
+     "out/dadosRotacao_pvq_001.dat" with line  title "Δt = 0.01", \
+     "out/dadosRotacao_pvq_0001.dat" with line  title "Δt = 0.001"
